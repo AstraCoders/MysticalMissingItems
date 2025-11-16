@@ -1,0 +1,6 @@
+{
+  "parent": "mystical_missing_items:item/lightium_bow",
+  "textures": {
+    "layer0": "mystical_missing_items:item/gear/lightium_bow_pulling_2"
+  }
+}

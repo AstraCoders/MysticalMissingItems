@@ -1,0 +1,6 @@
+{
+  "parent": "mystical_missing_items:item/insanium_crossbow",
+  "textures": {
+    "layer0": "mystical_missing_items:item/gear/insanium_crossbow_pulling_1"
+  }
+}

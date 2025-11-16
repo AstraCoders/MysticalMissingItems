@@ -1,0 +1,14 @@
+{
+  "parent": "item/handheld_rod",
+  "textures": {
+    "layer0": "mystical_missing_items:item/gear/ouranium_fishing_rod"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "cast": 1
+      },
+      "model": "mystical_missing_items:item/ouranium_fishing_rod_cast"
+    }
+  ]
+}

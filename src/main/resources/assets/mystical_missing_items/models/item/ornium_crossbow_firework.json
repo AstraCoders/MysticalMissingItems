@@ -1,0 +1,6 @@
+{
+  "parent": "mystical_missing_items:item/ornium_crossbow",
+  "textures": {
+    "layer0": "mystical_missing_items:item/gear/ornium_crossbow_firework"
+  }
+}

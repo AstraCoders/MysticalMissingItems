@@ -1,0 +1,6 @@
+{
+  "parent": "mystical_missing_items:item/insanium_bow",
+  "textures": {
+    "layer0": "mystical_missing_items:item/gear/insanium_bow_pulling_1"
+  }
+}

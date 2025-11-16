@@ -1,0 +1,6 @@
+{
+  "parent": "mystical_missing_items:item/ouranium_bow",
+  "textures": {
+    "layer0": "mystical_missing_items:item/gear/ouranium_bow_pulling_0"
+  }
+}

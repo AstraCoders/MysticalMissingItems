@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "mystical_missing_items:item/gear/insanium_shovel"
+  }
+}
