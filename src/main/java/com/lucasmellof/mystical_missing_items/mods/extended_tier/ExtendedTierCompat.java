@@ -1,6 +1,8 @@
 package com.lucasmellof.mystical_missing_items.mods.extended_tier;
 
 import com.blakebr0.mysticalagradditions.lib.ModCropTiers;
+import com.blakebr0.mysticalagriculture.api.machine.MachineUpgradeTier;
+import com.blakebr0.mysticalagriculture.item.MachineUpgradeItem;
 import com.lucasmellof.mystical_missing_items.registry.ModRegistry;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -35,6 +37,18 @@ public class ExtendedTierCompat {
 	public static final DeferredHolder<Item, Item> OURANIUM_FISHING_ROD = ModRegistry.registerFishingRod("ouranium_fishing_rod", ModItemTier.OURANIUM, 10, 2);
 	public static final DeferredHolder<Item, Item> OURANIUM_SICKLE = ModRegistry.registerSickle("ouranium_sickle", ModItemTier.OURANIUM, 13, ModCropTiers.SIX.getTextColor(), 10, 2);
 	public static final DeferredHolder<Item, Item> OURANIUM_SCYTHE = ModRegistry.registerScythe("ouranium_scythe", ModItemTier.OURANIUM, 13, ModCropTiers.SIX.getTextColor(), 10, 2);
+
+
+	public static final MachineUpgradeTier ORNIUM_UPGRADE = Enum.valueOf(MachineUpgradeTier.class, "ORNIUM");
+	public static final MachineUpgradeTier LIGHTIUM_UPGRADE = Enum.valueOf(MachineUpgradeTier.class, "LIGHTIUM");
+	public static final MachineUpgradeTier TORNIUM_UPGRADE = Enum.valueOf(MachineUpgradeTier.class, "TORNIUM");
+	public static final MachineUpgradeTier OURANIUM_UPGRADE = Enum.valueOf(MachineUpgradeTier.class, "OURANIUM");
+
+	public static final DeferredHolder<Item, Item> ORNIUM_MACHINE_UPGRADE = ModRegistry.ITEMS.register("ornium_upgrade", () -> new MachineUpgradeItem(ORNIUM_UPGRADE));
+	public static final DeferredHolder<Item, Item> LIGHTIUM_MACHINE_UPGRADE = ModRegistry.ITEMS.register("lightium_upgrade", () -> new MachineUpgradeItem(LIGHTIUM_UPGRADE));
+	public static final DeferredHolder<Item, Item> TORNIUM_MACHINE_UPGRADE = ModRegistry.ITEMS.register("tornium_upgrade", () -> new MachineUpgradeItem(TORNIUM_UPGRADE));
+	public static final DeferredHolder<Item, Item> OURANIUM_MACHINE_UPGRADE = ModRegistry.ITEMS.register("ouranium_upgrade", () -> new MachineUpgradeItem(OURANIUM_UPGRADE));
+
 
 	public static void init() {
 	}

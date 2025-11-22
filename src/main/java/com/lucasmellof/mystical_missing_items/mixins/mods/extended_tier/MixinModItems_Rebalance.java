@@ -1,4 +1,4 @@
-package com.lucasmellof.mystical_missing_items.mixins;
+package com.lucasmellof.mystical_missing_items.mixins.mods.extended_tier;
 
 import com.blakebr0.mysticalagriculture.item.EssenceWateringCanItem;
 import net.minecraft.world.item.Item;
@@ -17,7 +17,7 @@ import velvet.mysticalextendedtier.lib.ModCropTiers;
  * @author Lucasmellof, Lucas de Mello Freitas created on 15/11/2025
  */
 @Mixin(ModItems.class)
-public class MixinModItems {
+public class MixinModItems_Rebalance {
     @Shadow
     @Final
     public static DeferredRegister<Item> REGISTRY;
@@ -40,10 +40,10 @@ public class MixinModItems {
 
     @Inject(method = "<clinit>", at = @At(value = "TAIL"))
     private static void onPut(CallbackInfo ci) {
-        ((AccessorDeferredRegister<?>) REGISTRY).getOriginalEntries().remove(ORNIUM_WATERING_CAN);
-        ((AccessorDeferredRegister<?>) REGISTRY).getOriginalEntries().remove(LIGHTIUM_WATERING_CAN);
-        ((AccessorDeferredRegister<?>) REGISTRY).getOriginalEntries().remove(TORNIUM_WATERING_CAN);
-        ((AccessorDeferredRegister<?>) REGISTRY).getOriginalEntries().remove(OURANIUM_WATERING_CAN);
+        ((AccessorDeferredRegister_Rebalance<?>) REGISTRY).getOriginalEntries().remove(ORNIUM_WATERING_CAN);
+        ((AccessorDeferredRegister_Rebalance<?>) REGISTRY).getOriginalEntries().remove(LIGHTIUM_WATERING_CAN);
+        ((AccessorDeferredRegister_Rebalance<?>) REGISTRY).getOriginalEntries().remove(TORNIUM_WATERING_CAN);
+        ((AccessorDeferredRegister_Rebalance<?>) REGISTRY).getOriginalEntries().remove(OURANIUM_WATERING_CAN);
 
         REGISTRY.register(
                 "ornium_watering_can", () -> new EssenceWateringCanItem(17, 0.55, ModCropTiers.SEVEN.getTextColor()));

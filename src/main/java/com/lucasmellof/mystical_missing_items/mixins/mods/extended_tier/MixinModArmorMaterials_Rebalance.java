@@ -1,4 +1,4 @@
-package com.lucasmellof.mystical_missing_items.mixins;
+package com.lucasmellof.mystical_missing_items.mixins.mods.extended_tier;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -11,7 +11,7 @@ import java.util.EnumMap;
  * @author Lucasmellof, Lucas de Mello Freitas created on 15/11/2025
  */
 @Mixin(ModArmorMaterials.class)
-public class MixinModArmorMaterials {
+public class MixinModArmorMaterials_Rebalance {
     @Redirect(
             method = "lambda$static$0",
             at =

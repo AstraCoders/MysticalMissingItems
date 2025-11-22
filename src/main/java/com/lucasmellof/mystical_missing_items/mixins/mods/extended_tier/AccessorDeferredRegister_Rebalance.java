@@ -1,4 +1,4 @@
-package com.lucasmellof.mystical_missing_items.mixins;
+package com.lucasmellof.mystical_missing_items.mixins.mods.extended_tier;
 
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -12,7 +12,7 @@ import java.util.function.Supplier;
  * @author Lucasmellof, Lucas de Mello Freitas created on 15/11/2025
  */
 @Mixin(DeferredRegister.class)
-public interface AccessorDeferredRegister<T> {
+public interface AccessorDeferredRegister_Rebalance<T> {
 	@Accessor("entries")
 	Map<DeferredHolder<T, ? extends T>, Supplier<? extends T>> getOriginalEntries();
 }

@@ -4,9 +4,11 @@
 	"package": "com.lucasmellof.mystical_missing_items.mixins",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"AccessorDeferredRegister",
-		"MixinModArmorMaterials",
-		"MixinModItems"
+		"mods.agradditions.MixinMachineUpgradeTier",
+		"mods.extended_tier.MixinMachineUpgradeTier",
+		"mods.extended_tier.AccessorDeferredRegister_Rebalance",
+		"mods.extended_tier.MixinModArmorMaterials_Rebalance",
+		"mods.extended_tier.MixinModItems_Rebalance"
 	],
 	"client": [
 	],
@@ -16,5 +18,5 @@
 	"overwrites": {
 		"requireAnnotations": true
 	},
-	"verbose": true
+	"plugin": "com.lucasmellof.mystical_missing_items.MysticalMissingItemsMixinPlugin"
 }

@@ -2,7 +2,9 @@ package com.lucasmellof.mystical_missing_items.mods.agradditions;
 
 import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.blakebr0.mysticalagradditions.lib.ModCropTiers;
+import com.blakebr0.mysticalagriculture.api.machine.MachineUpgradeTier;
 import com.blakebr0.mysticalagriculture.item.EssenceWateringCanItem;
+import com.blakebr0.mysticalagriculture.item.MachineUpgradeItem;
 import com.blakebr0.mysticalagriculture.item.armor.EssenceBootsItem;
 import com.blakebr0.mysticalagriculture.item.armor.EssenceChestplateItem;
 import com.blakebr0.mysticalagriculture.item.armor.EssenceHelmetItem;
@@ -58,6 +60,10 @@ public class AgradditionsCompat {
 	public static final DeferredHolder<Item, Item> INSANIUM_CHESTPLATE = ModRegistry.ITEMS.register("insanium_chestplate", () -> new EssenceChestplateItem(INSANIUM, 370, 6, 2));
 	public static final DeferredHolder<Item, Item> INSANIUM_LEGGINGS = ModRegistry.ITEMS.register("insanium_leggings", () -> new EssenceLeggingsItem(INSANIUM, 370, 6, 2));
 	public static final DeferredHolder<Item, Item> INSANIUM_BOOTS = ModRegistry.ITEMS.register("insanium_boots", () -> new EssenceBootsItem(INSANIUM, 370, 6, 2));
+
+	public static final MachineUpgradeTier INSANIUM_UPGRADE = Enum.valueOf(MachineUpgradeTier.class, "INSANIUM");
+
+	public static final DeferredHolder<Item, Item> INSANIUM_MACHINE_UPGRADE = ModRegistry.ITEMS.register("insanium_upgrade", () -> new MachineUpgradeItem(INSANIUM_UPGRADE));
 
 	public static void init() {
 		// to be called to load the class

@@ -5,8 +5,9 @@ plugins {
 
 def getSecrets() {
     Properties props = new Properties()
-    if (file('../secrets.properties').exists()) {
-        props.load(new FileInputStream(file('../secrets.properties')))
+    println(file('./secrets.properties'))
+    if (file('./secrets.properties').exists()) {
+        props.load(new FileInputStream(file("./secrets.properties")))
     }
     return props
 }
