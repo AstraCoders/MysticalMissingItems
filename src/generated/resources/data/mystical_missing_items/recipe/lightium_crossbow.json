@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "item": "mysticalextendedtier:lightium_gemstone"
+    },
+    "I": {
+      "item": "mysticalextendedtier:lightium_ingot"
+    },
+    "S": {
+      "item": "mystical_missing_items:ornium_crossbow"
+    }
+  },
+  "pattern": [
+    " G ",
+    "ISI",
+    " G "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mystical_missing_items:lightium_crossbow"
+  }
+}

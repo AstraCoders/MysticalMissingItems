@@ -8,6 +8,7 @@ import com.mojang.logging.LogUtils;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import org.slf4j.Logger;
 
 @Mod(MysticalMissingItems.MOD_ID)
@@ -16,6 +17,9 @@ public class MysticalMissingItems {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public MysticalMissingItems(IEventBus modEventBus, ModContainer modContainer) {
+        // Register the config
+        modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
         if (ModChecker.MYSTICAL_AGRADDITIONS.isModLoaded()) {
             AgradditionsCompat.init();
         }

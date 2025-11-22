@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "item": "mysticalagradditions:insanium_gemstone"
+    },
+    "I": {
+      "item": "mysticalagradditions:insanium_ingot"
+    },
+    "S": {
+      "item": "mysticalagriculture:awakened_supremium_sickle"
+    }
+  },
+  "pattern": [
+    " G ",
+    "ISI",
+    " G "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mystical_missing_items:insanium_sickle"
+  }
+}
