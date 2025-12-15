@@ -13,17 +13,17 @@ import net.minecraft.world.item.Item;
 public class ClientStuff {
 
 	public static void registerBow(Item item) {
-		ItemProperties.register(item, ResourceLocation.withDefaultNamespace("pull"), EssenceBowItem.getPullPropertyGetter());
-		ItemProperties.register(item, ResourceLocation.withDefaultNamespace("pulling"), EssenceBowItem.getPullingPropertyGetter());
+		ItemProperties.register(item, new ResourceLocation("minecraft","pull"), EssenceBowItem.getPullPropertyGetter());
+		ItemProperties.register(item, new ResourceLocation("minecraft","pulling"), EssenceBowItem.getPullingPropertyGetter());
 	}
 	public static void registerCrossbow(Item item) {
-		ItemProperties.register(item, ResourceLocation.withDefaultNamespace("pull"), EssenceCrossbowItem.getPullPropertyGetter());
-		ItemProperties.register(item, ResourceLocation.withDefaultNamespace("pulling"), EssenceCrossbowItem.getPullingPropertyGetter());
-		ItemProperties.register(item, ResourceLocation.withDefaultNamespace("charged"), EssenceCrossbowItem.getChargedPropertyGetter());
-		ItemProperties.register(item, ResourceLocation.withDefaultNamespace("firework"), EssenceCrossbowItem.getFireworkPropertyGetter());
+		ItemProperties.register(item, new ResourceLocation("minecraft","pull"), EssenceCrossbowItem.getPullPropertyGetter());
+		ItemProperties.register(item, new ResourceLocation("minecraft","pulling"), EssenceCrossbowItem.getPullingPropertyGetter());
+		ItemProperties.register(item, new ResourceLocation("minecraft","charged"), EssenceCrossbowItem.getChargedPropertyGetter());
+		ItemProperties.register(item, new ResourceLocation("minecraft","firework"), EssenceCrossbowItem.getFireworkPropertyGetter());
 	}
 
 	public static void registerFishingRod(Item item) {
-		ItemProperties.register(item, ResourceLocation.withDefaultNamespace("cast"), EssenceFishingRodItem.getCastPropertyGetter());
+		ItemProperties.register(item, new ResourceLocation("minecraft","cast"), EssenceFishingRodItem.getCastPropertyGetter());
 	}
 }

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "item": "mystical_extended_tier:ouranium_gemstone"
+    },
+    "I": {
+      "item": "mystical_extended_tier:ouranium_ingot"
+    },
+    "S": {
+      "item": "mystical_missing_items:tornium_fishing_rod"
+    }
+  },
+  "pattern": [
+    " G ",
+    "ISI",
+    " G "
+  ],
+  "result": {
+    "item": "mystical_missing_items:ouranium_fishing_rod"
+  },
+  "show_notification": true
+}

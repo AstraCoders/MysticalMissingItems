@@ -1,0 +1,47 @@
+{
+	"type": "mysticalagriculture:awakening",
+	"neoforge:conditions": [
+		{
+			"type": "neoforge:mod_loaded",
+			"modid": "mysticalextendedtier"
+		}
+	],
+	"essences": [
+		{
+			"id": "mysticalagriculture:air_essence",
+			"count": 20
+		},
+		{
+			"id": "mysticalagriculture:earth_essence",
+			"count": 20
+		},
+		{
+			"id": "mysticalagriculture:water_essence",
+			"count": 20
+		},
+		{
+			"id": "mysticalagriculture:fire_essence",
+			"count": 20
+		}
+	],
+	"input": {
+		"item": "mystical_missing_items:tornium_upgrade"
+	},
+	"ingredients": [
+		{
+			"item": "mysticalextendedtier:ouranium_ingot"
+		},
+		{
+			"item": "mysticalextendedtier:ouranium_ingot"
+		},
+		{
+			"item": "mysticalextendedtier:ouranium_ingot"
+		},
+		{
+			"item": "mysticalextendedtier:ouranium_ingot"
+		}
+	],
+	"result": {
+		"id": "mystical_missing_items:ouranium_upgrade"
+	}
+}

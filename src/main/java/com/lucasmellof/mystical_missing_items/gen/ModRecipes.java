@@ -3,26 +3,26 @@ package com.lucasmellof.mystical_missing_items.gen;
 import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.lucasmellof.mystical_missing_items.mods.agradditions.AgradditionsCompat;
 import com.lucasmellof.mystical_missing_items.mods.extended_tier.ExtendedTierCompat;
-import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
-import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
-import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
-import java.util.concurrent.CompletableFuture;
+import java.util.function.Consumer;
 
 /*
  * @author Lucasmellof, Lucas de Mello Freitas created on 22/11/2025
  */
 public class ModRecipes extends RecipeProvider implements IConditionBuilder {
-	public ModRecipes(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-		super(output, registries);
+	public ModRecipes(PackOutput output) {
+		super(output);
 	}
 
+
 	@Override
-	protected void buildRecipes(RecipeOutput output, HolderLookup.Provider holderLookup) {
+	protected void buildRecipes(Consumer<FinishedRecipe> output) {
 		// Watering Can - uses crafting_shaped
 		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AgradditionsCompat.INSANIUM_WATERING_CAN.get())
 				.pattern("FGF")
@@ -207,8 +207,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.ORNIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.ORNIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.ORNIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.ORNIUM_INGOT.get())
 				.define('S', AgradditionsCompat.INSANIUM_BOW.get())
 				.unlockedBy("has_insanium_bow", has(AgradditionsCompat.INSANIUM_BOW.get()))
 				.save(output);
@@ -218,8 +218,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.ORNIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.ORNIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.ORNIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.ORNIUM_INGOT.get())
 				.define('S', AgradditionsCompat.INSANIUM_CROSSBOW.get())
 				.unlockedBy("has_insanium_crossbow", has(AgradditionsCompat.INSANIUM_CROSSBOW.get()))
 				.save(output);
@@ -229,8 +229,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.ORNIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.ORNIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.ORNIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.ORNIUM_INGOT.get())
 				.define('S', AgradditionsCompat.INSANIUM_FISHING_ROD.get())
 				.unlockedBy("has_insanium_fishing_rod", has(AgradditionsCompat.INSANIUM_FISHING_ROD.get()))
 				.save(output);
@@ -240,8 +240,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.ORNIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.ORNIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.ORNIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.ORNIUM_INGOT.get())
 				.define('S', AgradditionsCompat.INSANIUM_SICKLE.get())
 				.unlockedBy("has_insanium_sickle", has(AgradditionsCompat.INSANIUM_SICKLE.get()))
 				.save(output);
@@ -251,8 +251,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.ORNIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.ORNIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.ORNIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.ORNIUM_INGOT.get())
 				.define('S', AgradditionsCompat.INSANIUM_SCYTHE.get())
 				.unlockedBy("has_insanium_scythe", has(AgradditionsCompat.INSANIUM_SCYTHE.get()))
 				.save(output);
@@ -263,8 +263,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.LIGHTIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.LIGHTIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.LIGHTIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.LIGHTIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.ORNIUM_BOW.get())
 				.unlockedBy("has_ornium_bow", has(ExtendedTierCompat.ORNIUM_BOW.get()))
 				.save(output);
@@ -274,8 +274,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.LIGHTIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.LIGHTIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.LIGHTIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.LIGHTIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.ORNIUM_CROSSBOW.get())
 				.unlockedBy("has_ornium_crossbow", has(ExtendedTierCompat.ORNIUM_CROSSBOW.get()))
 				.save(output);
@@ -285,8 +285,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.LIGHTIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.LIGHTIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.LIGHTIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.LIGHTIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.ORNIUM_FISHING_ROD.get())
 				.unlockedBy("has_ornium_fishing_rod", has(ExtendedTierCompat.ORNIUM_FISHING_ROD.get()))
 				.save(output);
@@ -296,8 +296,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.LIGHTIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.LIGHTIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.LIGHTIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.LIGHTIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.ORNIUM_SICKLE.get())
 				.unlockedBy("has_ornium_sickle", has(ExtendedTierCompat.ORNIUM_SICKLE.get()))
 				.save(output);
@@ -307,8 +307,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.LIGHTIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.LIGHTIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.LIGHTIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.LIGHTIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.ORNIUM_SCYTHE.get())
 				.unlockedBy("has_ornium_scythe", has(ExtendedTierCompat.ORNIUM_SCYTHE.get()))
 				.save(output);
@@ -319,8 +319,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.TORNIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.TORNIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.TORNIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.TORNIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.LIGHTIUM_BOW.get())
 				.unlockedBy("has_lightium_bow", has(ExtendedTierCompat.LIGHTIUM_BOW.get()))
 				.save(output);
@@ -330,8 +330,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.TORNIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.TORNIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.TORNIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.TORNIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.LIGHTIUM_CROSSBOW.get())
 				.unlockedBy("has_lightium_crossbow", has(ExtendedTierCompat.LIGHTIUM_CROSSBOW.get()))
 				.save(output);
@@ -341,8 +341,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.TORNIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.TORNIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.TORNIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.TORNIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.LIGHTIUM_FISHING_ROD.get())
 				.unlockedBy("has_lightium_fishing_rod", has(ExtendedTierCompat.LIGHTIUM_FISHING_ROD.get()))
 				.save(output);
@@ -352,8 +352,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.TORNIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.TORNIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.TORNIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.TORNIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.LIGHTIUM_SICKLE.get())
 				.unlockedBy("has_lightium_sickle", has(ExtendedTierCompat.LIGHTIUM_SICKLE.get()))
 				.save(output);
@@ -363,8 +363,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.TORNIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.TORNIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.TORNIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.TORNIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.LIGHTIUM_SCYTHE.get())
 				.unlockedBy("has_lightium_scythe", has(ExtendedTierCompat.LIGHTIUM_SCYTHE.get()))
 				.save(output);
@@ -375,8 +375,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.OURANIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.OURANIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.OURANIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.OURANIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.TORNIUM_BOW.get())
 				.unlockedBy("has_tornium_bow", has(ExtendedTierCompat.TORNIUM_BOW.get()))
 				.save(output);
@@ -386,8 +386,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.OURANIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.OURANIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.OURANIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.OURANIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.TORNIUM_CROSSBOW.get())
 				.unlockedBy("has_tornium_crossbow", has(ExtendedTierCompat.TORNIUM_CROSSBOW.get()))
 				.save(output);
@@ -397,8 +397,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.OURANIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.OURANIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.OURANIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.OURANIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.TORNIUM_FISHING_ROD.get())
 				.unlockedBy("has_tornium_fishing_rod", has(ExtendedTierCompat.TORNIUM_FISHING_ROD.get()))
 				.save(output);
@@ -408,8 +408,8 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.OURANIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.OURANIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.OURANIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.OURANIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.TORNIUM_SICKLE.get())
 				.unlockedBy("has_tornium_sickle", has(ExtendedTierCompat.TORNIUM_SICKLE.get()))
 				.save(output);
@@ -419,53 +419,10 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 				.pattern(" G ")
 				.pattern("ISI")
 				.pattern(" G ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.OURANIUM_GEMSTONE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.OURANIUM_INGOT.get())
+				.define('G', Velvet.mystical_extended_tier.init.ModItems.OURANIUM_GEMSTONE.get())
+				.define('I', Velvet.mystical_extended_tier.init.ModItems.OURANIUM_INGOT.get())
 				.define('S', ExtendedTierCompat.TORNIUM_SCYTHE.get())
 				.unlockedBy("has_tornium_scythe", has(ExtendedTierCompat.TORNIUM_SCYTHE.get()))
-				.save(output);
-
-
-
-		ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, velvet.mysticalextendedtier.init.ModItems.ORNIUM_HELMET.get())
-				.pattern(" G ")
-				.pattern(" S ")
-				.pattern(" I ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.OURANIUM_GEMSTONE.get())
-				.define('S', AgradditionsCompat.INSANIUM_HELMET.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.OURANIUM_INGOT.get())
-				.unlockedBy("has_tornium_scythe", has(AgradditionsCompat.INSANIUM_HELMET.get()))
-				.save(output);
-
-		ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, velvet.mysticalextendedtier.init.ModItems.ORNIUM_CHESTPLATE.get())
-				.pattern(" G ")
-				.pattern(" S ")
-				.pattern(" I ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.OURANIUM_GEMSTONE.get())
-				.define('S', AgradditionsCompat.INSANIUM_CHESTPLATE.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.OURANIUM_INGOT.get())
-				.unlockedBy("has_tornium_scythe", has(AgradditionsCompat.INSANIUM_CHESTPLATE.get()))
-				.save(output);
-
-		ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, velvet.mysticalextendedtier.init.ModItems.ORNIUM_LEGGINGS.get())
-				.pattern(" G ")
-				.pattern(" S ")
-				.pattern(" I ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.OURANIUM_GEMSTONE.get())
-				.define('S', AgradditionsCompat.INSANIUM_LEGGINGS.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.OURANIUM_INGOT.get())
-				.unlockedBy("has_tornium_scythe", has(AgradditionsCompat.INSANIUM_LEGGINGS.get()))
-				.save(output);
-
-
-		ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, velvet.mysticalextendedtier.init.ModItems.ORNIUM_BOOTS.get())
-				.pattern(" G ")
-				.pattern(" S ")
-				.pattern(" I ")
-				.define('G', velvet.mysticalextendedtier.init.ModItems.OURANIUM_GEMSTONE.get())
-				.define('S', AgradditionsCompat.INSANIUM_BOOTS.get())
-				.define('I', velvet.mysticalextendedtier.init.ModItems.OURANIUM_INGOT.get())
-				.unlockedBy("has_tornium_scythe", has(AgradditionsCompat.INSANIUM_BOOTS.get()))
 				.save(output);
 	}
 }

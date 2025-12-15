@@ -1,7 +1,7 @@
 package com.lucasmellof.mystical_missing_items.mixins.mods.extended_tier;
 
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
@@ -14,5 +14,5 @@ import java.util.function.Supplier;
 @Mixin(DeferredRegister.class)
 public interface AccessorDeferredRegister_Rebalance<T> {
 	@Accessor("entries")
-	Map<DeferredHolder<T, ? extends T>, Supplier<? extends T>> getOriginalEntries();
+	Map<RegistryObject<T>, Supplier<? extends T>> getOriginalEntries();
 }

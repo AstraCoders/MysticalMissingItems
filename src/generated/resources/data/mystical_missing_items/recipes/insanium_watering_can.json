@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "mysticalagriculture:mystical_fertilizer"
+    },
+    "G": {
+      "item": "mysticalagradditions:insanium_ingot"
+    },
+    "I": {
+      "item": "mysticalagradditions:insanium_ingot"
+    },
+    "S": {
+      "item": "mysticalagriculture:awakened_supremium_watering_can"
+    }
+  },
+  "pattern": [
+    "FGF",
+    "ISI",
+    "FGF"
+  ],
+  "result": {
+    "item": "mystical_missing_items:insanium_watering_can"
+  },
+  "show_notification": true
+}

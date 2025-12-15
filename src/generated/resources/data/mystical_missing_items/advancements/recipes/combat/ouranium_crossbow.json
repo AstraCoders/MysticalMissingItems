@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mystical_missing_items:ouranium_crossbow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tornium_crossbow": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mystical_missing_items:tornium_crossbow"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_tornium_crossbow",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mystical_missing_items:ouranium_crossbow"
+    ]
+  },
+  "sends_telemetry_event": false
+}

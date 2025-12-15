@@ -2,7 +2,8 @@
 	"required": true,
 	"minVersion": "0.8",
 	"package": "com.lucasmellof.mystical_missing_items.mixins",
-	"compatibilityLevel": "JAVA_21",
+	"compatibilityLevel": "JAVA_8",
+	"refmap": "mysticalmissingitems.refmap.json",
 	"mixins": [
 		"mods.agradditions.MixinMachineUpgradeTier",
 		"mods.extended_tier.MixinMachineUpgradeTier",
@@ -14,9 +15,6 @@
 	],
 	"injectors": {
 		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
 	},
 	"plugin": "com.lucasmellof.mystical_missing_items.MysticalMissingItemsMixinPlugin"
 }

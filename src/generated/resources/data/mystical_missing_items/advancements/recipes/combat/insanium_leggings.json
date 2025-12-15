@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_awakened_supremium_leggings": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mysticalagriculture:awakened_supremium_leggings"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mystical_missing_items:insanium_leggings"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_awakened_supremium_leggings",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mystical_missing_items:insanium_leggings"
+    ]
+  },
+  "sends_telemetry_event": false
+}

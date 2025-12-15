@@ -1,0 +1,47 @@
+{
+	"type": "mysticalagriculture:awakening",
+	"conditions": [
+		{
+			"type": "forge:mod_loaded",
+			"modid": "mystical_extended_tier"
+		}
+	],
+	"essences": [
+		{
+			"item": "mysticalagriculture:air_essence",
+			"count": 20
+		},
+		{
+			"item": "mysticalagriculture:earth_essence",
+			"count": 20
+		},
+		{
+			"item": "mysticalagriculture:water_essence",
+			"count": 20
+		},
+		{
+			"item": "mysticalagriculture:fire_essence",
+			"count": 20
+		}
+	],
+	"input": {
+		"item": "mystical_missing_items:ornium_upgrade"
+	},
+	"ingredients": [
+		{
+			"item": "mystical_extended_tier:lightium_ingot"
+		},
+		{
+			"item": "mystical_extended_tier:lightium_ingot"
+		},
+		{
+			"item": "mystical_extended_tier:lightium_ingot"
+		},
+		{
+			"item": "mystical_extended_tier:lightium_ingot"
+		}
+	],
+	"result": {
+		"item": "mystical_missing_items:lightium_upgrade"
+	}
+}

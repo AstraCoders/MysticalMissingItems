@@ -1,7 +1,7 @@
 package com.lucasmellof.mystical_missing_items;
 
-import net.neoforged.fml.loading.FMLLoader;
-import net.neoforged.fml.loading.FMLPaths;
+import net.minecraftforge.fml.loading.FMLLoader;
+import net.minecraftforge.fml.loading.FMLPaths;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
@@ -27,7 +27,7 @@ public class MysticalMissingItemsMixinPlugin implements IMixinConfigPlugin {
 		// Try to read the config value early
 		enableRebalance = readRebalanceConfig();
 		hasAgradditions = FMLLoader.getLoadingModList().getModFileById("mysticalagradditions") != null;
-		hasExtendedTier = FMLLoader.getLoadingModList().getModFileById("mysticalextendedtier") != null;
+		hasExtendedTier = FMLLoader.getLoadingModList().getModFileById("mystical_extended_tier") != null;
 	}
 
 	@Override

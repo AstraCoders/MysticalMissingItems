@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_insanium_crossbow": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "mystical_missing_items:insanium_crossbow"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mystical_missing_items:ornium_crossbow"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_insanium_crossbow",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mystical_missing_items:ornium_crossbow"
+    ]
+  },
+  "sends_telemetry_event": false
+}

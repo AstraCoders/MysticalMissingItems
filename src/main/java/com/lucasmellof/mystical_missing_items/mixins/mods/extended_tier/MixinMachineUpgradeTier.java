@@ -1,7 +1,8 @@
 package com.lucasmellof.mystical_missing_items.mixins.mods.extended_tier;
 
+import Velvet.mystical_extended_tier.init.ModCropTiers;
 import com.blakebr0.mysticalagriculture.api.crop.CropTier;
-import com.blakebr0.mysticalagriculture.api.machine.MachineUpgradeTier;
+import com.blakebr0.mysticalagriculture.util.MachineUpgradeTier;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Mutable;
@@ -10,7 +11,6 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import velvet.mysticalextendedtier.lib.ModCropTiers;
 
 import java.util.Arrays;
 

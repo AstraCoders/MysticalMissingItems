@@ -1,17 +1,17 @@
 package com.lucasmellof.mystical_missing_items.mixins.mods.extended_tier;
 
+import Velvet.mystical_extended_tier.init.ModCropTiers;
+import Velvet.mystical_extended_tier.init.ModItems;
 import com.blakebr0.mysticalagriculture.item.EssenceWateringCanItem;
 import net.minecraft.world.item.Item;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import velvet.mysticalextendedtier.init.ModItems;
-import velvet.mysticalextendedtier.lib.ModCropTiers;
 
 /*
  * @author Lucasmellof, Lucas de Mello Freitas created on 15/11/2025
@@ -24,19 +24,19 @@ public class MixinModItems_Rebalance {
 
     @Shadow
     @Final
-    public static DeferredHolder<Item, Item> ORNIUM_WATERING_CAN;
+    public static RegistryObject<Item> ORNIUM_WATERING_CAN;
 
     @Shadow
     @Final
-    public static DeferredHolder<Item, Item> TORNIUM_WATERING_CAN;
+    public static RegistryObject<Item> TORNIUM_WATERING_CAN;
 
     @Shadow
     @Final
-    public static DeferredHolder<Item, Item> LIGHTIUM_WATERING_CAN;
+    public static RegistryObject<Item> LIGHTIUM_WATERING_CAN;
 
     @Shadow
     @Final
-    public static DeferredHolder<Item, Item> OURANIUM_WATERING_CAN;
+    public static RegistryObject<Item> OURANIUM_WATERING_CAN;
 
     @Inject(method = "<clinit>", at = @At(value = "TAIL"))
     private static void onPut(CallbackInfo ci) {

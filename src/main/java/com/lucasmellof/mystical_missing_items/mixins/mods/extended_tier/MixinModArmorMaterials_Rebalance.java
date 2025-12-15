@@ -1,54 +1,25 @@
 package com.lucasmellof.mystical_missing_items.mixins.mods.extended_tier;
 
+import net.minecraft.sounds.SoundEvent;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
-import velvet.mysticalextendedtier.init.ModArmorMaterials;
+import org.spongepowered.asm.mixin.injection.Inject;
+import Velvet.mystical_extended_tier.lib.ModArmorMaterial;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import java.util.EnumMap;
+import java.util.function.Supplier;
 
 /*
  * @author Lucasmellof, Lucas de Mello Freitas created on 15/11/2025
  */
-@Mixin(ModArmorMaterials.class)
+@Mixin(ModArmorMaterial.class)
 public class MixinModArmorMaterials_Rebalance {
-    @Redirect(
-            method = "lambda$static$0",
-            at =
-                    @At(
-                            value = "INVOKE",
-                            target = "Ljava/util/EnumMap;put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;"))
-    private static <K extends Enum<K>, V> V onPut(EnumMap instance, K key, V value) {
-        return (V) instance.put(key, (Integer) value + 2);
-    }
 
-    @Redirect(
-            method = "lambda$static$3",
-            at =
-                    @At(
-                            value = "INVOKE",
-                            target = "Ljava/util/EnumMap;put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;"))
-    private static <K extends Enum<K>, V> V onPut$3(EnumMap instance, K key, V value) {
-        return (V) instance.put(key, (Integer) value + 2);
-    }
+    @Inject(method = "<init>", at = @At("RETURN"))
+    private void mysticalmissingitems$afterInit(String enumName, int ordinal, String name, int maxDamageFactor, int[] damageReductionAmountArray, int enchantability, SoundEvent soundEvent, float toughness, float knockbackResistance, Supplier par10, CallbackInfo ci) {
 
-    @Redirect(
-            method = "lambda$static$6",
-            at =
-                    @At(
-                            value = "INVOKE",
-                            target = "Ljava/util/EnumMap;put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;"))
-    private static <K extends Enum<K>, V> V onPut$6(EnumMap instance, K key, V value) {
-        return (V) instance.put(key, (Integer) value + 2);
-    }
-
-    @Redirect(
-            method = "lambda$static$9",
-            at =
-                    @At(
-                            value = "INVOKE",
-                            target = "Ljava/util/EnumMap;put(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;"))
-    private static <K extends Enum<K>, V> V onPut$9(EnumMap instance, K key, V value) {
-        return (V) instance.put(key, (Integer) value + 2);
+        for (int i = 0; i < damageReductionAmountArray.length; i++) {
+            damageReductionAmountArray[i] += 2;
+        }
     }
 }

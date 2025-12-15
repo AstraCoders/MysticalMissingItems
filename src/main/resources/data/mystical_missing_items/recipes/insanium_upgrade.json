@@ -1,0 +1,41 @@
+{
+	"type": "mysticalagriculture:awakening",
+	"essences": [
+		{
+			"item": "mysticalagriculture:air_essence",
+			"count": 20
+		},
+		{
+			"item": "mysticalagriculture:earth_essence",
+			"count": 20
+		},
+		{
+			"item": "mysticalagriculture:water_essence",
+			"count": 20
+		},
+		{
+			"item": "mysticalagriculture:fire_essence",
+			"count": 20
+		}
+	],
+	"input": {
+		"item": "mysticalagriculture:awakened_supremium_upgrade"
+	},
+	"ingredients": [
+		{
+			"item": "mysticalagradditions:insanium_ingot"
+		},
+		{
+			"item": "mysticalagradditions:insanium_ingot"
+		},
+		{
+			"item": "mysticalagradditions:insanium_ingot"
+		},
+		{
+			"item": "mysticalagradditions:insanium_ingot"
+		}
+	],
+	"result": {
+		"item": "mystical_missing_items:insanium_upgrade"
+	}
+}

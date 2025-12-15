@@ -9,6 +9,6 @@ public class Const {
     public static final String MOD_ID = MysticalMissingItems.MOD_ID;
 
     public static ResourceLocation of(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+        return new ResourceLocation(MOD_ID, path);
     }
 }

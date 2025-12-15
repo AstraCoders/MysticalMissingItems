@@ -1,7 +1,7 @@
 package com.lucasmellof.mystical_missing_items.mods.agradditions;
 
 import com.lucasmellof.mystical_missing_items.client.ClientStuff;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 
 /*
  * @author Lucasmellof, Lucas de Mello Freitas created on 16/11/2025
