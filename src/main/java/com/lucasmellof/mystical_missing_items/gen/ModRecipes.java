@@ -8,6 +8,7 @@ import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.function.Consumer;
@@ -23,6 +24,20 @@ public class ModRecipes extends RecipeProvider implements IConditionBuilder {
 
 	@Override
 	protected void buildRecipes(Consumer<FinishedRecipe> output) {
+        // Growth Accelerator
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AgradditionsCompat.INSANIUM_GROWTH_ACCELERATOR.get())
+                .pattern("ESE")
+                .pattern("SGS")
+                .pattern("ESE")
+                .define('E', ModItems.INSANIUM_ESSENCE.get())
+                .define('G', ModItems.INSANIUM_GEMSTONE.get())
+                .define('S', Tags.Items.STONE)
+                .unlockedBy(
+                        "has_insanium_essence",
+                        has(ModItems.INSANIUM_ESSENCE.get()))
+                .save(output);
+
 		// Watering Can - uses crafting_shaped
 		ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AgradditionsCompat.INSANIUM_WATERING_CAN.get())
 				.pattern("FGF")

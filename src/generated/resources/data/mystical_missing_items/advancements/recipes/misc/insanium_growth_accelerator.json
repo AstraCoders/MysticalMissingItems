@@ -1,11 +1,13 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_awakened_supremium_crossbow": {
+    "has_insanium_essence": {
       "conditions": {
         "items": [
           {
-            "items": "mysticalagriculture:awakened_supremium_crossbow"
+            "items": [
+              "mysticalagradditions:insanium_essence"
+            ]
           }
         ]
       },
@@ -13,20 +15,21 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mystical_missing_items:insanium_crossbow"
+        "recipe": "mystical_missing_items:insanium_growth_accelerator"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_the_recipe",
-      "has_awakened_supremium_crossbow"
+      "has_insanium_essence",
+      "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "mystical_missing_items:insanium_crossbow"
+      "mystical_missing_items:insanium_growth_accelerator"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

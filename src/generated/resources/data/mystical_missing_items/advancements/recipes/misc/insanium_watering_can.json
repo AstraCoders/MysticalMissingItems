@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_awakened_supremium_watering_can": {
+    "has_insanium_essence": {
       "conditions": {
         "items": [
           {
             "items": [
-              "mysticalagriculture:awakened_supremium_watering_can"
+              "mysticalagradditions:insanium_essence"
             ]
           }
         ]
@@ -22,7 +22,7 @@
   },
   "requirements": [
     [
-      "has_awakened_supremium_watering_can",
+      "has_insanium_essence",
       "has_the_recipe"
     ]
   ],
