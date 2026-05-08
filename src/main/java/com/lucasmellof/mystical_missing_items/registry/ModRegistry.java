@@ -8,12 +8,16 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+
+import java.util.function.Supplier;
 
 /*
  * @author Lucasmellof, Lucas de Mello Freitas created on 15/11/2025
@@ -24,6 +28,9 @@ public class ModRegistry {
             DeferredRegister.create(Registries.ARMOR_MATERIAL, MysticalMissingItems.MOD_ID);
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(Registries.ITEM, MysticalMissingItems.MOD_ID);
+
+    public static final DeferredRegister<Block> BLOCKS
+            = DeferredRegister.create(Registries.BLOCK, MysticalMissingItems.MOD_ID);
 
     public static final DeferredRegister<CreativeModeTab> TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Const.MOD_ID);
@@ -36,6 +43,7 @@ public class ModRegistry {
     public static void init(IEventBus bus) {
         TABS.register(bus);
         MATERIALS.register(bus);
+        BLOCKS.register(bus);
         ITEMS.register(bus);
     }
 
@@ -61,5 +69,21 @@ public class ModRegistry {
     public static DeferredHolder<Item, Item> registerScythe(
             String id, Tier tier, int range, ChatFormatting formatting, int tinkerable, int slot) {
         return ModRegistry.ITEMS.register(id, () -> new EssenceScytheItem(tier, range, formatting, tinkerable, slot));
+    }
+
+
+    private static <T extends Block> DeferredHolder<Item, Item> registerBlockItem(String name, DeferredHolder<Block, T> block) {
+        return ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties()));
+    }
+
+    private static <T extends Block> DeferredHolder<Block, T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
+        return BLOCKS.register(name, block);
+    }
+
+    public static <T extends Block> DeferredHolder<Block, T> registerBlock(String name, Supplier<T> block) {
+        DeferredHolder<Block, T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn);
+        return toReturn;
     }
 }

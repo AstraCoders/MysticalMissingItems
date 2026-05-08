@@ -2,6 +2,7 @@ package com.lucasmellof.mystical_missing_items.mods.agradditions;
 
 import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.blakebr0.mysticalagradditions.lib.ModCropTiers;
+import com.blakebr0.mysticalagriculture.block.GrowthAcceleratorBlock;
 import com.blakebr0.mysticalagriculture.api.machine.MachineUpgradeTier;
 import com.blakebr0.mysticalagriculture.item.EssenceWateringCanItem;
 import com.blakebr0.mysticalagriculture.item.MachineUpgradeItem;
@@ -18,6 +19,7 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.EnumMap;
@@ -27,6 +29,7 @@ import java.util.List;
  * @author Lucasmellof, Lucas de Mello Freitas created on 15/11/2025
  */
 public class AgradditionsCompat {
+
 	public static final DeferredHolder<ArmorMaterial, ArmorMaterial> INSANIUM = ModRegistry.MATERIALS.register("insanium", () -> new ArmorMaterial(Util.make(
 			new EnumMap<>(ArmorItem.Type.class), map -> {
 				map.put(ArmorItem.Type.BOOTS, 10);
@@ -64,6 +67,10 @@ public class AgradditionsCompat {
 	public static final MachineUpgradeTier INSANIUM_UPGRADE = Enum.valueOf(MachineUpgradeTier.class, "INSANIUM");
 
 	public static final DeferredHolder<Item, Item> INSANIUM_MACHINE_UPGRADE = ModRegistry.ITEMS.register("insanium_upgrade", () -> new MachineUpgradeItem(INSANIUM_UPGRADE));
+
+    public static final DeferredHolder<Block, Block> INSANIUM_GROWTH_ACCELERATOR = ModRegistry.registerBlock(
+            "insanium_growth_accelerator",
+            () -> new GrowthAcceleratorBlock(64, ModCropTiers.SIX.getTextColor()));
 
 	public static void init() {
 		// to be called to load the class

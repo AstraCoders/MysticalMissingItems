@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "mystical_missing_items:block/insanium_growth_accelerator"
+  }
+}
