@@ -7,13 +7,16 @@ import com.lucasmellof.mystical_missing_items.MysticalMissingItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.function.Supplier;
 
 /*
  * @author Lucasmellof, Lucas de Mello Freitas created on 15/11/2025
@@ -22,6 +25,9 @@ public class ModRegistry {
 
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(Registries.ITEM, MysticalMissingItems.MOD_ID);
+
+    public static final DeferredRegister<Block> BLOCKS
+            = DeferredRegister.create(Registries.BLOCK, MysticalMissingItems.MOD_ID);
 
     public static final DeferredRegister<CreativeModeTab> TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Const.MOD_ID);
@@ -33,6 +39,7 @@ public class ModRegistry {
 
     public static void init(IEventBus bus) {
         TABS.register(bus);
+        BLOCKS.register(bus);
         ITEMS.register(bus);
     }
 
@@ -58,5 +65,21 @@ public class ModRegistry {
     public static RegistryObject<Item> registerScythe(
             String id, Tier tier, int range, ChatFormatting formatting, int tinkerable, int slot) {
         return ModRegistry.ITEMS.register(id, () -> new EssenceScytheItem(tier, range, formatting, tinkerable, slot));
+    }
+
+
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block) {
+        return ITEMS.register(name, () -> new BlockItem(block.get(),
+                new Item.Properties()));
+    }
+
+    private static <T extends Block> RegistryObject<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
+        return BLOCKS.register(name, block);
+    }
+
+    public static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn);
+        return toReturn;
     }
 }

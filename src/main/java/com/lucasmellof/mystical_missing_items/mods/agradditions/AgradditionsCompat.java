@@ -2,6 +2,7 @@ package com.lucasmellof.mystical_missing_items.mods.agradditions;
 
 import com.blakebr0.mysticalagradditions.init.ModCropTiers;
 import com.blakebr0.mysticalagradditions.init.ModItems;
+import com.blakebr0.mysticalagriculture.block.GrowthAcceleratorBlock;
 import com.blakebr0.mysticalagriculture.item.EssenceWateringCanItem;
 import com.blakebr0.mysticalagriculture.item.MachineUpgradeItem;
 import com.blakebr0.mysticalagriculture.item.armor.EssenceBootsItem;
@@ -10,7 +11,6 @@ import com.blakebr0.mysticalagriculture.item.armor.EssenceHelmetItem;
 import com.blakebr0.mysticalagriculture.item.armor.EssenceLeggingsItem;
 import com.blakebr0.mysticalagriculture.item.tool.*;
 import com.blakebr0.mysticalagriculture.util.MachineUpgradeTier;
-import com.lucasmellof.mystical_missing_items.Const;
 import com.lucasmellof.mystical_missing_items.registry.ModRegistry;
 import net.minecraft.Util;
 import net.minecraft.sounds.SoundEvent;
@@ -20,10 +20,10 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.EnumMap;
-import java.util.List;
 import java.util.function.Supplier;
 
 /*
@@ -52,6 +52,10 @@ public class AgradditionsCompat {
 	public static final MachineUpgradeTier INSANIUM_UPGRADE = Enum.valueOf(MachineUpgradeTier.class, "INSANIUM");
 
 	public static final RegistryObject<Item> INSANIUM_MACHINE_UPGRADE = ModRegistry.ITEMS.register("insanium_upgrade", () -> new MachineUpgradeItem(INSANIUM_UPGRADE));
+
+    public static final RegistryObject<Block> INSANIUM_GROWTH_ACCELERATOR = ModRegistry.registerBlock(
+            "insanium_growth_accelerator",
+            () -> new GrowthAcceleratorBlock(64, ModCropTiers.SIX.getTextColor()));
 
 	public static void init() {
 		// to be called to load the class
@@ -123,5 +127,6 @@ public class AgradditionsCompat {
 			return this.knockbackResistance;
 		}
 	}
+
 
 }
