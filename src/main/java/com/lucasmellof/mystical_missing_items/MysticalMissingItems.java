@@ -1,7 +1,6 @@
 package com.lucasmellof.mystical_missing_items;
 
 import com.lucasmellof.mystical_missing_items.mods.agradditions.AgradditionsCompat;
-import com.lucasmellof.mystical_missing_items.mods.extended_tier.ExtendedTierCompat;
 import com.lucasmellof.mystical_missing_items.registry.ModRegistry;
 import com.lucasmellof.mystical_missing_items.util.ModChecker;
 import com.mojang.logging.LogUtils;
@@ -23,9 +22,9 @@ public class MysticalMissingItems {
         if (ModChecker.MYSTICAL_AGRADDITIONS.isModLoaded()) {
             AgradditionsCompat.init();
         }
-        if (ModChecker.MYSTICAL_EXTENDED_TIER.isModLoaded()) {
-            ExtendedTierCompat.init();
-        }
+//        if (ModChecker.MYSTICAL_EXTENDED_TIER.isModLoaded()) {
+//            ExtendedTierCompat.init();
+//        }
         ModRegistry.init(modEventBus);
     }
 }

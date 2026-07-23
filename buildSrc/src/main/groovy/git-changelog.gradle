@@ -30,12 +30,13 @@ task genChangelog() {
 rootProject.ext.mod_changelog = rootDir.toPath().resolve('CHANGELOG.md').toFile().text
 
 def getExecOutput(commands) {
-    def out = new ByteArrayOutputStream()
-
-    exec {
-        commandLine commands
-        standardOutput out
+    def process = new ProcessBuilder(commands)
+            .directory(rootDir)
+            .redirectErrorStream(true)
+            .start()
+    def output = process.inputStream.getText('UTF-8').trim()
+    if (process.waitFor() != 0) {
+        throw new GradleException("Command failed: ${commands.join(' ')}\n${output}")
     }
-
-    return out.toString().trim()
+    return output
 }

@@ -2,16 +2,15 @@ package com.lucasmellof.mystical_missing_items.registry;
 
 import com.blakebr0.mysticalagriculture.init.ModItems;
 import com.blakebr0.mysticalagriculture.item.tool.*;
+import com.blakebr0.cucumber.item.BaseBlockItem;
 import com.lucasmellof.mystical_missing_items.Const;
 import com.lucasmellof.mystical_missing_items.MysticalMissingItems;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.ToolMaterial;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -24,8 +23,6 @@ import java.util.function.Supplier;
  */
 public class ModRegistry {
 
-    public static final DeferredRegister<ArmorMaterial> MATERIALS =
-            DeferredRegister.create(Registries.ARMOR_MATERIAL, MysticalMissingItems.MOD_ID);
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(Registries.ITEM, MysticalMissingItems.MOD_ID);
 
@@ -42,39 +39,37 @@ public class ModRegistry {
 
     public static void init(IEventBus bus) {
         TABS.register(bus);
-        MATERIALS.register(bus);
         BLOCKS.register(bus);
         ITEMS.register(bus);
     }
 
     public static DeferredHolder<Item, Item> registerBow(
-            String id, Tier tier, int tinkerable, int slot, float speed, float damage) {
-        return ModRegistry.ITEMS.register(id, () -> new EssenceBowItem(tier, tinkerable, slot, speed, damage));
+            String id, ToolMaterial material, int tinkerable, int slot, float speed, float damage) {
+        return ITEMS.register(id, () -> new EssenceBowItem(Const.of(id), material, tinkerable, slot, speed, damage));
     }
 
     public static DeferredHolder<Item, Item> registerCrossbow(
-            String id, Tier tier, int tinkerable, int slot, float speed, float damage) {
-        return ModRegistry.ITEMS.register(id, () -> new EssenceCrossbowItem(tier, tinkerable, slot, speed, damage));
+            String id, ToolMaterial material, int tinkerable, int slot, float speed, float damage) {
+        return ITEMS.register(id, () -> new EssenceCrossbowItem(Const.of(id), material, tinkerable, slot, speed, damage));
     }
 
-    public static DeferredHolder<Item, Item> registerFishingRod(String id, Tier tier, int tinkerable, int slot) {
-        return ModRegistry.ITEMS.register(id, () -> new EssenceFishingRodItem(tier, tinkerable, slot));
+    public static DeferredHolder<Item, Item> registerFishingRod(String id, ToolMaterial material, int tinkerable, int slot) {
+        return ITEMS.register(id, () -> new EssenceFishingRodItem(Const.of(id), material, tinkerable, slot));
     }
 
     public static DeferredHolder<Item, Item> registerSickle(
-            String id, Tier tier, int range, ChatFormatting formatting, int tinkerable, int slot) {
-        return ModRegistry.ITEMS.register(id, () -> new EssenceSickleItem(tier, range, formatting, tinkerable, slot));
+            String id, ToolMaterial material, int range, ChatFormatting formatting, int tinkerable, int slot) {
+        return ITEMS.register(id, () -> new EssenceSickleItem(Const.of(id), material, range, formatting, tinkerable, slot));
     }
 
     public static DeferredHolder<Item, Item> registerScythe(
-            String id, Tier tier, int range, ChatFormatting formatting, int tinkerable, int slot) {
-        return ModRegistry.ITEMS.register(id, () -> new EssenceScytheItem(tier, range, formatting, tinkerable, slot));
+            String id, ToolMaterial material, int range, ChatFormatting formatting, int tinkerable, int slot) {
+        return ITEMS.register(id, () -> new EssenceScytheItem(Const.of(id), material, range, formatting, tinkerable, slot));
     }
 
 
     private static <T extends Block> DeferredHolder<Item, Item> registerBlockItem(String name, DeferredHolder<Block, T> block) {
-        return ITEMS.register(name, () -> new BlockItem(block.get(),
-                new Item.Properties()));
+        return ITEMS.register(name, () -> new BaseBlockItem(Const.of(name), block.get()));
     }
 
     private static <T extends Block> DeferredHolder<Block, T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {

@@ -26,8 +26,8 @@ public class MysticalMissingItemsMixinPlugin implements IMixinConfigPlugin {
 	public void onLoad(String mixinPackage) {
 		// Try to read the config value early
 		enableRebalance = readRebalanceConfig();
-		hasAgradditions = FMLLoader.getLoadingModList().getModFileById("mysticalagradditions") != null;
-		hasExtendedTier = FMLLoader.getLoadingModList().getModFileById("mysticalextendedtier") != null;
+		hasAgradditions = FMLLoader.getCurrent().getLoadingModList().getModFileById("mysticalagradditions") != null;
+		hasExtendedTier = FMLLoader.getCurrent().getLoadingModList().getModFileById("mysticalextendedtier") != null;
 	}
 
 	@Override

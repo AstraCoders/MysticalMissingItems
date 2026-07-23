@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mystical_missing_items:insanium"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mystical_missing_items:insanium"
+      }
+    ]
+  }
+}
