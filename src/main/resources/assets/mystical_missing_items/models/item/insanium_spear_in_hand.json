@@ -1,0 +1,6 @@
+{
+  "parent": "item/spear_in_hand",
+  "textures": {
+    "layer0": "mystical_missing_items:item/gear/insanium_spear_in_hand"
+  }
+}

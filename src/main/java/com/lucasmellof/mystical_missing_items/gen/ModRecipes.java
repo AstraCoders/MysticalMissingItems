@@ -130,6 +130,17 @@ public class ModRecipes extends RecipeProvider {
 				.unlockedBy("has_awakened_supremium_crossbow", has(com.blakebr0.mysticalagriculture.init.ModItems.AWAKENED_SUPREMIUM_CROSSBOW.get()))
 				.save(output);
 
+        // Spear
+        ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.COMBAT, AgradditionsCompat.INSANIUM_SPEAR.get())
+                .pattern(" G ")
+                .pattern("ISI")
+                .pattern(" G ")
+                .define('G', ModItems.INSANIUM_GEMSTONE.get())
+                .define('I', ModItems.INSANIUM_INGOT.get())
+                .define('S', com.blakebr0.mysticalagriculture.init.ModItems.AWAKENED_SUPREMIUM_SPEAR.get())
+                .unlockedBy("has_awakened_supremium_spear", has(com.blakebr0.mysticalagriculture.init.ModItems.AWAKENED_SUPREMIUM_SPEAR.get()))
+                .save(output);
+
 		// Shears
 		ShapedRecipeBuilder.shaped(this.registries.lookupOrThrow(Registries.ITEM), RecipeCategory.TOOLS, AgradditionsCompat.INSANIUM_SHEARS.get())
 				.pattern(" G ")

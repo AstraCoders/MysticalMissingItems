@@ -1,3 +1,3 @@
 ## Changelog
 
-- bump version
+- update curseforgegradle
