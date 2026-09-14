@@ -59,6 +59,7 @@ public class AgradditionsCompat {
 	public static final DeferredHolder<Item, Item> INSANIUM_WATERING_CAN = ModRegistry.ITEMS.register("insanium_watering_can", () -> new EssenceWateringCanItem(Const.of("insanium_watering_can"), 15, 0.50, ModCropTiers.SIX.getTextColor()));
 	public static final DeferredHolder<Item, Item> INSANIUM_BOW = ModRegistry.registerBow("insanium_bow", AgradditionsTier.INSANIUM, 6, 2, 2.35F, 5.0F);
 	public static final DeferredHolder<Item, Item> INSANIUM_CROSSBOW = ModRegistry.registerCrossbow("insanium_crossbow", AgradditionsTier.INSANIUM, 6, 2, 2.35F, 5.0F);
+    public static final DeferredHolder<Item, Item> INSANIUM_SPEAR = ModRegistry.ITEMS.register("insanium_spear", () -> new EssenceSpearItem(Const.of("insanium_spear"), AgradditionsTier.INSANIUM, 1.05F, 1.075F, 0.5F, 3.0F, 10.0F, 6.5F, 5.1F, 10.0F, 4.6F, 6, 2));
 	public static final DeferredHolder<Item, Item> INSANIUM_SHEARS = ModRegistry.ITEMS.register("insanium_shears", () -> new EssenceShearsItem(Const.of("insanium_shears"), AgradditionsTier.INSANIUM, 6, 2));
 	public static final DeferredHolder<Item, Item> INSANIUM_FISHING_ROD = ModRegistry.registerFishingRod("insanium_fishing_rod", AgradditionsTier.INSANIUM, 6, 2);
 	public static final DeferredHolder<Item, Item> INSANIUM_SICKLE = ModRegistry.registerSickle("insanium_sickle", AgradditionsTier.INSANIUM, 9, ModCropTiers.SIX.getTextColor(), 6, 2);
