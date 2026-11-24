@@ -1,16 +1,15 @@
 package com.lucasmellof.mystical_missing_items.mods.agradditions;
 
-import com.blakebr0.mysticalagradditions.init.ModItems;
 import com.blakebr0.mysticalagradditions.lib.ModCropTiers;
 import com.blakebr0.mysticalagriculture.block.GrowthAcceleratorBlock;
 import com.blakebr0.mysticalagriculture.api.machine.MachineUpgradeTier;
 import com.blakebr0.mysticalagriculture.item.EssenceWateringCanItem;
 import com.blakebr0.mysticalagriculture.item.MachineUpgradeItem;
 import com.blakebr0.mysticalagriculture.item.armor.EssenceBootsItem;
-import com.blakebr0.mysticalagriculture.item.armor.EssenceChestplateItem;
 import com.blakebr0.mysticalagriculture.item.armor.EssenceHelmetItem;
 import com.blakebr0.mysticalagriculture.item.armor.EssenceLeggingsItem;
 import com.blakebr0.mysticalagriculture.item.tool.*;
+import com.blakebr0.mysticalagradditions.item.EssencePaxelItem;
 import com.lucasmellof.mystical_missing_items.Const;
 import com.lucasmellof.mystical_missing_items.registry.ModRegistry;
 import net.minecraft.resources.ResourceKey;
@@ -55,6 +54,7 @@ public class AgradditionsCompat {
 	public static final DeferredHolder<Item, Item> INSANIUM_SHOVEL = ModRegistry.ITEMS.register("insanium_shovel", () -> new EssenceShovelItem(Const.of("insanium_shovel"), AgradditionsTier.INSANIUM, 6, 2));
 	public static final DeferredHolder<Item, Item> INSANIUM_AXE = ModRegistry.ITEMS.register("insanium_axe", () -> new EssenceAxeItem(Const.of("insanium_axe"), AgradditionsTier.INSANIUM, 6, 2));
 	public static final DeferredHolder<Item, Item> INSANIUM_HOE = ModRegistry.ITEMS.register("insanium_hoe", () -> new EssenceHoeItem(Const.of("insanium_hoe"), AgradditionsTier.INSANIUM, 6, 2));
+	public static final DeferredHolder<Item, Item> INSANIUM_PAXEL = ModRegistry.ITEMS.register("insanium_paxel", () -> new EssencePaxelItem(Const.of("insanium_paxel"), AgradditionsTier.INSANIUM, 6, 2));
 //	public static final DeferredHolder<Item, Item> INSANIUM_STAFF = ModRegistry.ITEMS.register("insanium_staff", () -> new EssenceStaffItem(6, 1));
 	public static final DeferredHolder<Item, Item> INSANIUM_WATERING_CAN = ModRegistry.ITEMS.register("insanium_watering_can", () -> new EssenceWateringCanItem(Const.of("insanium_watering_can"), 15, 0.50, ModCropTiers.SIX.getTextColor()));
 	public static final DeferredHolder<Item, Item> INSANIUM_BOW = ModRegistry.registerBow("insanium_bow", AgradditionsTier.INSANIUM, 6, 2, 2.35F, 5.0F);
@@ -65,7 +65,7 @@ public class AgradditionsCompat {
 	public static final DeferredHolder<Item, Item> INSANIUM_SICKLE = ModRegistry.registerSickle("insanium_sickle", AgradditionsTier.INSANIUM, 9, ModCropTiers.SIX.getTextColor(), 6, 2);
 	public static final DeferredHolder<Item, Item> INSANIUM_SCYTHE = ModRegistry.registerScythe("insanium_scythe", AgradditionsTier.INSANIUM, 9, ModCropTiers.SIX.getTextColor(), 6, 2);
 	public static final DeferredHolder<Item, Item> INSANIUM_HELMET = ModRegistry.ITEMS.register("insanium_helmet", () -> new EssenceHelmetItem(Const.of("insanium_helmet"), INSANIUM, 6, 2));
-	public static final DeferredHolder<Item, Item> INSANIUM_CHESTPLATE = ModRegistry.ITEMS.register("insanium_chestplate", () -> new EssenceChestplateItem(Const.of("insanium_chestplate"), INSANIUM, 6, 2));
+	public static final DeferredHolder<Item, Item> INSANIUM_CHESTPLATE = ModRegistry.ITEMS.register("insanium_chestplate", () -> new InsaniumChestplateItem(Const.of("insanium_chestplate"), INSANIUM, 6, 2));
 	public static final DeferredHolder<Item, Item> INSANIUM_LEGGINGS = ModRegistry.ITEMS.register("insanium_leggings", () -> new EssenceLeggingsItem(Const.of("insanium_leggings"), INSANIUM, 6, 2));
 	public static final DeferredHolder<Item, Item> INSANIUM_BOOTS = ModRegistry.ITEMS.register("insanium_boots", () -> new EssenceBootsItem(Const.of("insanium_boots"), INSANIUM, 6, 2));
 

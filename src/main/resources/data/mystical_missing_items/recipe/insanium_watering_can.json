@@ -1,0 +1,17 @@
+{
+  "type": "cucumber:shaped_transfer_damage",
+  "transfer_components": true,
+  "pattern": [
+    "FIF",
+    "ISI",
+    "FIF"
+  ],
+  "key": {
+    "F": "mysticalagriculture:mystical_fertilizer",
+    "I": "mysticalagradditions:insanium_ingot",
+    "S": "mysticalagriculture:awakened_supremium_watering_can"
+  },
+  "result": {
+    "id": "mystical_missing_items:insanium_watering_can"
+  }
+}

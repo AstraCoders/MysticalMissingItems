@@ -1,0 +1,17 @@
+{
+  "type": "cucumber:shaped_transfer_damage",
+  "transfer_components": true,
+  "pattern": [
+    " G ",
+    "ISI",
+    " G "
+  ],
+  "key": {
+    "G": "mysticalagradditions:insanium_gemstone",
+    "I": "mysticalagradditions:insanium_ingot",
+    "S": "mysticalagriculture:awakened_supremium_shears"
+  },
+  "result": {
+    "id": "mystical_missing_items:insanium_shears"
+  }
+}

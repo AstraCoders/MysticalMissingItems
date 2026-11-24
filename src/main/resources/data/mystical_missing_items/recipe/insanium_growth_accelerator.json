@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ESE",
+    "SDS",
+    "ESE"
+  ],
+  "key": {
+    "E": "mysticalagradditions:insanium_essence",
+    "S": "#c:stones",
+    "D": "mysticalagradditions:insanium_gemstone"
+  },
+  "result": {
+    "id": "mystical_missing_items:insanium_growth_accelerator",
+    "count": 3
+  }
+}
