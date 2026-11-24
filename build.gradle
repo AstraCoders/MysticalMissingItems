@@ -111,24 +111,18 @@ neoForge {
 sourceSets.main {
     java {
         // Mystical Extended Tier has not published a 26.1 build yet.
-        exclude 'com/lucasmellof/mystical_missing_items/mods/extended_tier/**'
-        exclude 'com/lucasmellof/mystical_missing_items/mixins/mods/extended_tier/**'
-        exclude 'com/lucasmellof/mystical_missing_items/client/ClientStuff.java'
-        exclude 'com/lucasmellof/mystical_missing_items/mods/agradditions/AgradditionsClient.java'
-        exclude 'com/lucasmellof/mystical_missing_items/gen/ModRecipes.java'
-        exclude 'com/lucasmellof/mystical_missing_items/events/ModEvent.java'
-        exclude 'com/lucasmellof/mystical_missing_items/MysticalMissingItemsMixinPlugin.java'
+//        exclude 'com/lucasmellof/mystical_missing_items/mods/extended_tier/**'
+//        exclude 'com/lucasmellof/mystical_missing_items/mixins/mods/extended_tier/**'
+//        exclude 'com/lucasmellof/mystical_missing_items/client/ClientStuff.java'
+//        exclude 'com/lucasmellof/mystical_missing_items/mods/agradditions/AgradditionsClient.java'
+//        exclude 'com/lucasmellof/mystical_missing_items/gen/ModRecipes.java'
+//        exclude 'com/lucasmellof/mystical_missing_items/events/ModEvent.java'
+//        exclude 'com/lucasmellof/mystical_missing_items/MysticalMissingItemsMixinPlugin.java'
     }
     resources {
         srcDir 'src/generated/resources'
         exclude '**/.cache/**'
         exclude 'data/**/advancement/**'
-        exclude 'data/mysticalextendedtier/**'
-        exclude 'data/mystical_missing_items/recipe/agradatitions_*.json'
-        exclude 'data/mystical_missing_items/recipe/lightium_*.json'
-        exclude 'data/mystical_missing_items/recipe/ornium_*.json'
-        exclude 'data/mystical_missing_items/recipe/ouranium_*.json'
-        exclude 'data/mystical_missing_items/recipe/tornium_*.json'
     }
 }
 
@@ -138,6 +132,8 @@ dependencies {
     implementation "curse.maven:mystical-agriculture-tiered-crystals-299045:8219089"
     implementation "curse.maven:mystical-agriculture-246640:9291672"
     implementation "curse.maven:mystical-agradditions-256247:8344258"
+
+    implementation(files("libs/MysticalExtendedTier-26.1.2-3.0.0.jar"))
 
     runtimeOnly("mezz.jei:jei-$minecraft_version-neoforge:29.5.0.24")
     runtimeOnly("net.mezzdev.config:mezz_config-$minecraft_version-neoforge:0.7.1")

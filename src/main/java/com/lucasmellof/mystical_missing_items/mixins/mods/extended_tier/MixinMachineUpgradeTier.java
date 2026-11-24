@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import velvet.mysticalextendedtier.lib.ModCropTiers;
+import Velvet.mysticalextendedtier.lib.ExtendedCropTiers;
 
 import java.util.Arrays;
 
@@ -41,7 +41,7 @@ public abstract class MixinMachineUpgradeTier {
 		MachineUpgradeTier ornium = invokeInit(
 				"ORNIUM",
 				$VALUES.length,
-				ModCropTiers.SEVEN,
+				ExtendedCropTiers.SEVEN,
 				0.003,
 				192,
 				9,
@@ -50,7 +50,7 @@ public abstract class MixinMachineUpgradeTier {
 		MachineUpgradeTier lightium = invokeInit(
 				"LIGHTIUM",
 				$VALUES.length,
-				ModCropTiers.EIGHT,
+				ExtendedCropTiers.EIGHT,
 				0.0025,
 				256,
 				10,
@@ -59,7 +59,7 @@ public abstract class MixinMachineUpgradeTier {
 		MachineUpgradeTier tornium = invokeInit(
 				"TORNIUM",
 				$VALUES.length,
-				ModCropTiers.NINE,
+				ExtendedCropTiers.NINE,
 				0.002,
 				384,
 				11,
@@ -68,7 +68,7 @@ public abstract class MixinMachineUpgradeTier {
 		MachineUpgradeTier newTier = invokeInit(
 				"OURANIUM",
 				$VALUES.length,
-				ModCropTiers.TEN,
+				ExtendedCropTiers.TEN,
 				0.001,
 				512,
 				12,

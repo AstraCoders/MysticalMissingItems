@@ -27,7 +27,7 @@
       },
       "on_true": {
         "type": "minecraft:range_dispatch",
-        "property": "cucumber:custom_bow_pull",
+        "property": "cucumber:custom_crossbow_pull",
         "fallback": {
           "type": "minecraft:model",
           "model": "mystical_missing_items:item/insanium_crossbow_pulling_0"

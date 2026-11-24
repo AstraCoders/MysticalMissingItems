@@ -3,7 +3,7 @@ package com.lucasmellof.mystical_missing_items.mixins.mods.extended_tier;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
-import velvet.mysticalextendedtier.init.ModArmorMaterials;
+import Velvet.mysticalextendedtier.init.ModArmorMaterials;
 
 import java.util.EnumMap;
 
