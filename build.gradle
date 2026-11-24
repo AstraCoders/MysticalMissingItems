@@ -185,6 +185,7 @@ task publishCurseForge(type: net.darkhax.curseforgegradle.TaskPublishCurseForge)
     mainFile.addJavaVersion("Java ${project.java_version}")
     mainFile.addGameVersion(minecraft_version)
     mainFile.addModLoader("NeoForge")
+    mainFile.addEnvironment("Client", "Server")
 
     mainFile.addRequirement("cucumber")
     mainFile.addRequirement("mystical-agriculture")
