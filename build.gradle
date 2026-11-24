@@ -113,16 +113,16 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 
 dependencies {
-    implementation "curse.maven:cucumber-272335:7180790"
+    implementation "curse.maven:cucumber-272335:8035802"
     implementation "curse.maven:mystical-agriculture-tiered-crystals-299045:5863210"
-    implementation "curse.maven:mystical-agriculture-246640:7180808"
+    implementation "curse.maven:mystical-agriculture-246640:8796913"
     implementation "curse.maven:mystical-agradditions-256247:7180792"
     implementation "curse.maven:mystical-automation-1265613:7092232"
 
     implementation "curse.maven:jei-238222:7225068"
     implementation "curse.maven:configured-457570:7122915"
 
-    implementation(files("libs/MysticalExtendedTier-1.2.1.1-0.9.6.jar"))
+    implementation(files("libs/MysticalExtendedTier-1.2.1.1-2.0.0.jar"))
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

@@ -87,7 +87,7 @@ side="BOTH"
 [[dependencies."${mod_id}"]]
 modId="mysticalextendedtier"
 mandatory=false
-versionRange="[0.9.6,)"
+versionRange="[2.0.0,)"
 ordering="AFTER"
 side="BOTH"
 type="optional"

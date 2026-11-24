@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "mystical_missing_items:insanium_sword",
+    "mystical_missing_items:insanium_axe",
+    "mystical_missing_items:insanium_paxel",
+    "mystical_missing_items:insanium_sickle",
+    "mystical_missing_items:insanium_scythe"
+  ]
+}

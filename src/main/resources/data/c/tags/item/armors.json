@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "mystical_missing_items:insanium_helmet",
+    "mystical_missing_items:insanium_chestplate",
+    "mystical_missing_items:insanium_leggings",
+    "mystical_missing_items:insanium_boots"
+  ]
+}
